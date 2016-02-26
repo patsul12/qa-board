@@ -6,6 +6,13 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    updateQuestion(params) {
+      var question = params.question;
+      question.set('content', params.content);
+      question.set('notes', params.notes);
+      question.save();
+    },
+
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
       var question = params.question
@@ -14,6 +21,6 @@ export default Ember.Route.extend({
         return question.save();
       });
       this.transitionTo('question', params.question);
-    }
+    },
   }
 });

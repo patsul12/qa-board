@@ -37,5 +37,17 @@
     background-color: rgb(232, 238, 205);
     border-radius: 5px;
     padding: 5px;
+    float: right;
+  }
+  .question-stars {
+    border:none;
+    background-color: rgb(206, 244, 217);
+    &:hover {
+      transition: color 0.5s;
+      color: rgb(241, 249, 153);
+    }
+  }
+  .question-edit {
+    float: right;
   }
 }
