@@ -1,0 +1,12 @@
+<h3>New Question:</h3>
+<form>
+  <div class="form-group">
+    <label for="content">Question</label>
+    {{textarea value=content id="content" class="form-control"}}
+    <label for="notes">Notes</label>
+    {{input type="text" value=notes id="notes" class="form-control"}}
+    <label for="author">Author</label>
+    {{input type="text" value=author id="author" class="form-control"}}
+  </div>
+  <button class="btn btn-block btn-success" {{action "saveQuestion"}}>Create Question</button>
+</form>

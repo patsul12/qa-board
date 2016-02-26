@@ -1,0 +1,17 @@
+<div class="question row">
+  <h3 class="question-content">Question: {{model.content}}</h3>
+  <div class="question-notes">
+    {{model.notes}}
+  </div>
+  <div class="question-author col-xs-3 col-xs-offset-9 col-right">
+    By: {{model.author}}
+    <i class="fa fa-star"></i>{{model.stars}}
+  </div>
+</div>
+<div class="answers">
+  <h3>Answers:</h3>
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+  {{new-answer saveAnswer="saveAnswer" question=model}}
+</div>

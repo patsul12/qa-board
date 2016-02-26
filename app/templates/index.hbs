@@ -1,0 +1,6 @@
+{{#each model as |question|}}
+  <a href="question/{{question.id}}">
+    {{question-tile question=question}}
+  </a>
+{{/each}}
+{{new-question saveQuestion="saveQuestion"}}

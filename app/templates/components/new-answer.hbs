@@ -1,0 +1,10 @@
+<h3>New Answer:</h3>
+<form>
+  <div class="form-group">
+    <label for="content">Answer</label>
+    {{textarea value=content id="content" class="form-control"}}
+    <label for="author">Author</label>
+    {{input type="text" value=author id="author" class="form-control"}}
+  </div>
+  <button class="btn btn-block btn-success" {{action "saveAnswer"}}>Create Answer</button>
+</form>
